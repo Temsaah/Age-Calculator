@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+$primPurple: hsl(259, 100%, 65%);
+$primLightRed: hsl(0, 100%, 67%);
+
+$neutWhite: hsl(0, 0%, 100%);
+$neutOffwhite: hsl(0, 0%, 94%);
+$neutLightgrey: hsl(0, 0%, 86%);
+$neutSmokeygrey: hsl(0, 1%, 44%);
+$neutOffblack: hsl(0, 0%, 8%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $neutOffwhite;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+main {
+  background-color: $neutWhite;
+  width: 600px;
+  padding: 40px;
+  border-radius: 5px 5px 150px;
+}
+
+.birthday-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -38px;
+    width: 95%;
+    height: 1px;
+    background-color: $neutSmokeygrey;
+    opacity: 0.2;
+  }
+  div {
+    margin-right: 20px;
+    small {
+      font-size: 0.75rem;
+      color: $neutSmokeygrey;
+      font-style: italic;
+      font-weight: 500;
+      margin-top: 6px;
+    }
+    input {
+      padding: 10px 17px;
+      width: 115px;
+      border-radius: 5px;
+      border: 0.1px solid $neutLightgrey;
+      font-size: 1.4rem;
+      font-weight: 800;
+      &::placeholder {
+        font-weight: 800;
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid $primPurple;
+      }
+    }
+    label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1rem;
+      color: $neutSmokeygrey;
+      margin-bottom: 5px;
+    }
+  }
+  .day-cont {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .month-cont {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .year-cont {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  button {
+    position: absolute;
+    bottom: -70px;
+    right: 10px;
+    z-index: 100;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: $primPurple;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $neutOffblack;
+    }
+    img {
+      width: 35px;
+    }
+  }
+}
+
+.result-container {
+  margin-top: 70px;
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+    span {
+      color: $primPurple;
+      font-size: 5rem;
+      margin-right: 10px;
+    }
+    h2 {
+      font-weight: 800;
+      font-style: italic;
+      font-size: 4.5rem;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 530px) {
+  main {
+    padding: 20px;
+  }
+  .birthday-container div {
+    margin-right: 5px !important;
+  }
+  .result-container div {
+    margin-bottom: 20px;
+  }
+  .result-container div h2 {
+    font-size: 2rem;
+  }
+  .result-container div span {
+    font-size: 2.5rem;
+  }
+  .birthday-container div {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 428px) {
+  .birthday-container div input {
+    width: 100% !important;
+    &::placeholder {
+      font-size: 0.8rem;
+    }
+  }
+}

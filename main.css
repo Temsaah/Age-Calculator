@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  width: 600px;
+  padding: 40px;
+  border-radius: 5px 5px 150px;
+}
+
+.birthday-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+.birthday-container::after {
+  content: "";
+  position: absolute;
+  bottom: -38px;
+  width: 95%;
+  height: 1px;
+  background-color: hsl(0, 1%, 44%);
+  opacity: 0.2;
+}
+.birthday-container div {
+  margin-right: 20px;
+}
+.birthday-container div small {
+  font-size: 0.75rem;
+  color: hsl(0, 1%, 44%);
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 6px;
+}
+.birthday-container div input {
+  padding: 10px 17px;
+  width: 115px;
+  border-radius: 5px;
+  border: 0.1px solid hsl(0, 0%, 86%);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.birthday-container div input::-moz-placeholder {
+  font-weight: 800;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+.birthday-container div input::placeholder {
+  font-weight: 800;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+.birthday-container div input:focus {
+  outline: none;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+.birthday-container div label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 5px;
+}
+.birthday-container .day-cont {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.birthday-container .month-cont {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.birthday-container .year-cont {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.birthday-container button {
+  position: absolute;
+  bottom: -70px;
+  right: 10px;
+  z-index: 100;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  cursor: pointer;
+}
+.birthday-container button:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+.birthday-container button img {
+  width: 35px;
+}
+
+.result-container {
+  margin-top: 70px;
+}
+.result-container div {
+  display: flex;
+  align-items: center;
+  margin-bottom: -30px;
+}
+.result-container div span {
+  color: hsl(259, 100%, 65%);
+  font-size: 5rem;
+  margin-right: 10px;
+}
+.result-container div h2 {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 4.5rem;
+}
+
+@media (max-width: 630px) {
+  main {
+    width: 90%;
+  }
+}
+@media (max-width: 530px) {
+  main {
+    padding: 20px;
+  }
+  .birthday-container div {
+    margin-right: 5px !important;
+  }
+  .result-container div {
+    margin-bottom: 20px;
+  }
+  .result-container div h2 {
+    font-size: 2rem;
+  }
+  .result-container div span {
+    font-size: 2.5rem;
+  }
+  .birthday-container div {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 428px) {
+  .birthday-container div input {
+    width: 100% !important;
+  }
+  .birthday-container div input::-moz-placeholder {
+    font-size: 0.8rem;
+  }
+  .birthday-container div input::placeholder {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=main.css.map */
